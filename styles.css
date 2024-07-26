@@ -1,0 +1,138 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    padding: 12px;
+    text-align: center;
+    margin-top: 16px;
+}
+
+#img-store {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Cores */
+:root {
+    --primary-color: #4A90E2;
+    --secondary-color: #F2F2F2;
+    --highlight-color: #649689; 
+    --background-color: #FFFFFF;
+}
+
+/* Estilos dos cards */
+.card {
+    background-color: var(--secondary-color);
+    border: none;
+}
+
+.card-header {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+/* Responsividade para dispositivos móveis (max-width: 767px) */
+@media screen and (max-width: 767px) {
+    .container {
+        max-width: 100%;
+        padding: 0 16px;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-nav li {
+        margin-bottom: 8px;
+    }
+
+    .carousel-caption {
+        text-align: center;
+    }
+
+    #sobre .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #sobre img {
+        margin-bottom: 24px;
+        width: 100%;
+    }
+
+    .list-cars .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .list-cars .col-4 {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+    footer {
+        padding: 16px 0;
+        text-align: center;
+    }
+
+    footer .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer ul {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        margin: 16px 0 0 0;
+    }
+
+    footer li {
+        margin-left: 16px;
+    }
+}
+
+/* Responsividade para dispositivos iPad (min-width: 768px e max-width: 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        max-width: 90%;
+    }
+
+    #sobre .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #sobre img {
+        margin-bottom: 24px;
+        width: 100%;
+    }
+
+    .list-cars .row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+        gap: 24px;
+        justify-content: center; /* Centraliza os cards */
+    }
+
+    .list-cars .col-4 {
+        width: 100%; /* Faz com que os cards ocupem a largura total disponível */
+        margin-bottom: 24px;
+    }
+
+    .list-cars .col-4 img {
+        margin: 0 0 16px 0;
+        width: 100%;
+        height: auto;
+    }
+
+    footer .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
